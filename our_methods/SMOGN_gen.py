@@ -55,7 +55,7 @@ def SMOGN_gen(df, test_df, excluded_col, round_half_up_col, zero_col, target_nam
 
         # Replace negative values with 0
         # 負の値を0に置き換え
-        combined_df[zero_col] = combined_df[zero_col].applymap(lambda x: max(x, 0))
+        combined_df[zero_col] = smogn_df[zero_col].applymap(lambda x: max(x, 0))
 
         # Rounding half up
         if round_half_up_col:
