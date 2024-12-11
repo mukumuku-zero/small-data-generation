@@ -70,7 +70,7 @@ def SMOGN_gen(df, test_df, excluded_col, round_half_up_col, zero_col, target_nam
 
     gen_df = pd.concat([combined_df, df_user])
     test = test_df.drop(excluded_col, axis=1)
-    test = test_df.drop(target_name, axis=1)
+    test = test.drop(target_name, axis=1)
 
     # List to store prediction results
     # 予測結果を格納するリスト
