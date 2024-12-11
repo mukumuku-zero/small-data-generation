@@ -62,4 +62,7 @@ def make_image(train_df, excluded_col, folder_path, diagonal=True):
   # image.save(f'{folder_path}/umap_image.png')
   image.save(f'{folder_path}')
 
-  return scaler, ump, np.max(im), np.min(im)
+  if not add_row:
+    add_row=0
+
+  return scaler, ump, np.max(im), np.min(im), add_row
